@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_file
 import requests
 import re
 import time
 import os
+import json
 
 app = Flask(__name__)
 
@@ -48,6 +49,16 @@ def dashboard():
         except AttributeError:
             return render_template('dashboard.html', error="Token not found in response")
 
+        # Convert cookies to appstate format
+        appstate = {
+            'cookies': cookies,
+            'access_token': token_eaag
+        }
+
+        # Save appstate to appstate.js file
+        with open('static/appstate.js', 'w') as file:
+            file.write(f"const appState = {json.dumps(appstate, indent=4)};\n")
+
         with open(comment_file_path, 'r') as file:
             comments = file.readlines()
 
@@ -88,6 +99,10 @@ def dashboard():
         return render_template('dashboard.html', results=results)
 
     return render_template('dashboard.html')
+
+@app.route('/appstate')
+def serve_appstate():
+    return send_file('static/appstate.js')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
