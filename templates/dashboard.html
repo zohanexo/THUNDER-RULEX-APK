@@ -1,85 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cookie post server war rulex black devil</title>
-    <style>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title> OFFLINE WEB PAGE CONVO SERVER 𒌍•⸺̥̊ 𒋲 〲⭕𝐅𝐅𝐈𝐂𝐈𝐀𝐋 𓆩𖤓𓆪 F9RU WEB PAGE𒋲 ㅤ𖤓ㅤ࿐ㅤ࿐. 🥱🥱</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+     <style>
         body {
-            background-color: pink;
-            color: yellow;
             font-family: Arial, sans-serif;
+            background-image: url('https://i.ibb.co/k0FrLnh/Snapinsta-app-446585272-465721035974161-7203544009380796951-n-1080.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            width: 80%;
-            margin: auto;
+            max-width: 50px auto; /* Decreased max-width */
+            margin: 50px auto; /* Adjusted margin */
             padding: 20px;
+            background-color: rgba(220, 220, 220, 0.5); /* Transparent white background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        input, textarea, select, button {
+        h1 {
+            text-align: center;
+            color: white;
+            border: 1.9px solid glow;
+            border-radius: 8px;
+            border-width: 10px;
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(220, 20, 20, 0.5); /* Transparent red background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            color: auto;
+            display: block;
+            margin: 15px 0 5px;
+        }
+        .input {
+            margin: 10px;
+            background-color: rgba(220, 220, 220, 0.5) ;
+            border: none;
+            outline: none;
+            max-width: 360px;
+            padding: 20px 30px;
+            font-size: 10px;
+            border-radius: 9999px;
+            box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+            color: #fff;
+        }
+        input[type="text"], input[type="number"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
             display: block;
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
             border: none;
-        }
-        button {
-            background-color: pink;
-            color: blue;
+            border-radius: 4px;
             cursor: pointer;
         }
-        .results {
-            margin-top: 20px;
+        .submit-btn:hover {
+            background-color: #b0b300;
         }
-        .result {
-            background-color: pink;
-            color: blue;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: cyan;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>👀COOKIE POST SERVER WAR RUL3X🌀</h1>
-        <form method="POST" enctype="multipart/form-data">
-            <label for="cookie">Cookies:</label>
-            <input type="text" name="cookie" id="cookie" required>
-
-            <label for="post_id">Post ID:</label>
-            <input type="text" name="post_id" id="post_id" required>
-
-            <label for="commenter_name">hatter name:</label>
-            <input type="text" name="commenter_name" id="commenter_name" required>
-
-            <label for="delay">Delay (seconds):</label>
-            <input type="number" name="delay" id="delay" required>
-
-            <label for="comment_file">Select Your Comment File:</label>
-            <input type="file" name="comment_file" id="comment_file" required>
-
-            <button type="submit">Loder Run Kro</button>
-        </form>
-
-        <div class="results">
-            {% if results %}
-                {% for result in results %}
-                    <div class="result">
-                        <p>Status: {{ result.status }}</p>
-                        <p>Post ID: {{ result.post_id }}</p>
-                        <p>Comment: {{ result.comment }}</p>
-                        <p>Datetime: {{ result.datetime }}</p>
-                        {% if result.status == 'Failure' %}
-                            <p>Link: <a href="{{ result.link }}" target="_blank">{{ result.link }}</a></p>
-                        {% endif %}
-                    </div>
-                {% endfor %}
-            {% endif %}
-            {% if error %}
-                <p class="error">{{ error }}</p>
-            {% endif %}
-        </div>
-    </div>
-</body>
-</html>
+ 
